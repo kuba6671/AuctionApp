@@ -1,0 +1,10 @@
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\Theme\MenuButtonTheme.baml
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\Theme\TextboxTheme.baml
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\MainWindow.g.cs
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\MVVM\View\DiscoveryView.g.cs
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\MVVM\View\HomeView.g.cs
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\MVVM\View\RegistrationView.g.cs
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\App.g.cs
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\AuctionApp_MarkupCompile.cache
+E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Release\AuctionApp_MarkupCompile.lref
