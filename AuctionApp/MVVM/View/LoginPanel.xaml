@@ -6,13 +6,15 @@
         xmlns:local="clr-namespace:AuctionApp.MVVM.View"
         xmlns:viewModel="clr-namespace:AuctionApp.MVVM.ViewModel"
         mc:Ignorable="d"     
-        Title="LoginPanel" Height="450" Width="800" Background="Transparent">
+        Title="LoginPanel" Height="450" Width="800" Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None">
 
 
     <Window.DataContext>
         <viewModel:LoginViewModel/>
     </Window.DataContext>
-    
+
     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800">
         <Border.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -20,18 +22,30 @@
                 <GradientStop Color="#FF272537" Offset="1"/>
             </LinearGradientBrush>
         </Border.Background>
-        <Grid Width="800" Height="450" Margin="0,0,43.6,20.4">
+        <Grid Width="800" Height="450" Margin="0,0,0,4">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="143*"/>
-                <ColumnDefinition Width="17*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="Top" Height="450" Orientation="Horizontal" Margin="3.2,0,-3.2,0" Width="800" Grid.ColumnSpan="2">
+            <StackPanel VerticalAlignment="Top" Height="450" Orientation="Horizontal" Margin="3.2,0,-3.2,0" Grid.ColumnSpan="2" Width="800">
                 <StackPanel Width="400" HorizontalAlignment="Right" Height="450">
                     <Border BorderBrush="Black" BorderThickness="1" Height="450">
-                        <TextBlock TextWrapping="Wrap" Text="Tu bedzie logo" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Margin="0" Width="200" Height="198" Source="/AuctionApp;component/Images/logo.png"/>
                     </Border>
                 </StackPanel>
                 <StackPanel Width="400">
+                    <StackPanel Height="30" 
+                                Width="400" 
+                                RenderTransformOrigin="0.511,-6.668"
+                                Orientation="Horizontal">
+                        <Button Content="x" 
+                                Width="30" Height="30" 
+                                Background="#FF272537" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top"
+                                Margin="365,0,0,0"
+                                Command="{Binding CloseCommand}"/>
+                    </StackPanel>
                     <TextBox x:Name="UsernameTextbox" 
                              TextWrapping="Wrap"
                             GotFocus="UsernameTextbox_OnGotFocus"
@@ -40,7 +54,7 @@
                              Width="200"
                              Height="48"
                              FontSize="20"
-                             Margin="0,100,101,0" 
+                             Margin="0,50,101,0" 
                              Text="Nazwa uzytkownika"
                              RenderTransformOrigin="-12.304,-3.231" 
                              HorizontalAlignment="Center"
@@ -72,6 +86,7 @@
                                 Margin="20,0,0,0"
                                 />
                     </StackPanel>
+
                 </StackPanel>
             </StackPanel>
 

@@ -29,7 +29,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Elysian"
+            <TextBlock Text="Auction App"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Foreground="White"
