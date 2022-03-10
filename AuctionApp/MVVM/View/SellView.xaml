@@ -6,7 +6,7 @@
              xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" 
              xmlns:local="clr-namespace:AuctionApp.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Height="525">
     <UserControl.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -286,7 +286,7 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <StackPanel HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800">
+    <StackPanel HorizontalAlignment="Left" Height="525" VerticalAlignment="Top" Width="800">
         <StackPanel HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="800" Margin="0,0,-700,0" Orientation="Horizontal">
             <Border BorderBrush="Black" BorderThickness="1" Width="151" Margin="300,0,0,0" Height="60" Background="#FF02A4C3">
                 <Button Height="56" Content="+ Dodaj zdjęcie"
@@ -298,23 +298,51 @@
         <StackPanel Height="75" Margin="0" Width="800" Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" Text="Kategoria" FontSize="20"
                        Foreground="#FF02A4C3" Margin="260,20,0,0" Width="85" Height="55"/>
-            <ComboBox  Width="150" Height="50" Background="#FF272537" Style="{DynamicResource ComboBoxStyle1}" Margin="20,0,0,0" />
+            <ComboBox x:Name="CategoryTextbox"  
+                      Width="150" Height="50"
+                      Background="#FF272537" 
+                      Style="{DynamicResource ComboBoxStyle1}" 
+                      Margin="20,0,0,0" 
+                      BorderBrush="#FF02A4C3" />
+            
         </StackPanel>
         <StackPanel Height="75" Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" Text="Rozmiar" FontSize="20" Foreground="#FF02A4C3" Margin="260,20,20,0" Width="85" Height="55"/>
-            <TextBox x:Name="SizeTextbox" TextWrapping="Wrap" Width="150" Height="50" Margin="0" Background="#FF272537" FontSize="20"/>
+            <TextBox x:Name="SizeTextbox"
+                     Text="{Binding SizeText}"
+                     TextWrapping="Wrap"      
+                     Foreground="#FF02A4C3"
+                     Width="150" Height="50" 
+                     Margin="0"
+                     Background="#FF272537"
+                     FontSize="20" 
+                     BorderBrush="#FF02A4C3"/>
         </StackPanel>
         <StackPanel Height="75" Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" Text="Stan" Foreground="#FF02A4C3" FontSize="20" Margin="260,20,20,0" Width="85" Height="55"/>
-            <TextBox x:Name="StateTextbox" TextWrapping="Wrap" Width="150" Height="48" Margin="0" Background="#FF272537" FontSize="20"/>
+            <TextBox x:Name="StateTextbox"
+                     Foreground="#FF02A4C3"
+                     Text="{Binding StateText}"
+                     TextWrapping="Wrap" Width="150" Height="48" Margin="0" Background="#FF272537" FontSize="20" BorderBrush="#FF02A4C3"/>
         </StackPanel>
         <StackPanel Height="75" Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" Text="Cena" Foreground="#FF02A4C3" FontSize="20" Margin="260,20,20,0" Width="85" Height="55"/>
-            <TextBox x:Name="Pricetextbox" TextWrapping="Wrap" Width="150" Height="50" Background="#FF272537" FontSize="20"/>
+            <TextBox x:Name="PriceTextbox"
+                     Foreground="#FF02A4C3"
+                     Text="{Binding PriceText}"
+                     TextWrapping="Wrap" Width="150" Height="50" Background="#FF272537" FontSize="20" BorderBrush="#FF02A4C3"/>
         </StackPanel>
         <StackPanel Height="75.3" Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" Text="Opis" Foreground="#FF02A4C3" FontSize="20" Margin="260,20,20,0" Width="85" Height="55"/>
-            <TextBox x:Name="DescriptionTextBox" TextWrapping="Wrap" Width="150" Height="52" Background="#FF272537" FontSize="16"/>
+            <TextBox x:Name="DescriptionTextBox"
+                     Foreground="#FF02A4C3"
+                     Text="{Binding DescriptionText}"
+                     TextWrapping="Wrap" Width="150" Height="52" Background="#FF272537" FontSize="16" BorderBrush="#FF02A4C3"/>
+        </StackPanel>
+        <StackPanel Height="75">
+            <Button x:Name="addButton"
+                    Command="{Binding addCommand}"
+                    Foreground="#FF02A4C3" Content="Dodaj" Width="250" Height="50" Margin="0,10,20,0" Background="#FF272537" BorderBrush="#FF02A4C3"/>
         </StackPanel>
     </StackPanel>
 </UserControl>

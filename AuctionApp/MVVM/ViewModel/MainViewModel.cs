@@ -12,12 +12,12 @@ namespace AuctionApp.MVVM.ViewModel
     {
         public RelayCommand HomeViewCommand { get; set; }
 
-        public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand SellViewCommand { get; set; }
 
         public RelayCommand CloseCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
-        public DiscoveryViewModel DiscoveryVM { get; set; }
+        public SellViewModel SellVM { get; set; }
 
         private object _currentView;
 
@@ -35,7 +35,7 @@ namespace AuctionApp.MVVM.ViewModel
         public MainViewModel()
         {
             HomeVM = new HomeViewModel();
-            DiscoveryVM = new DiscoveryViewModel();
+            SellVM = new SellViewModel();
 
             CurrentView = HomeVM;
 
@@ -44,9 +44,9 @@ namespace AuctionApp.MVVM.ViewModel
                 CurrentView = HomeVM;
             });
 
-            DiscoveryViewCommand = new RelayCommand(o =>
+            SellViewCommand = new RelayCommand(o =>
             {
-                CurrentView = DiscoveryVM;
+                CurrentView = SellVM;
             });
 
             CloseCommand = new RelayCommand(o =>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AuctionApp"
         xmlns:viewModel="clr-namespace:AuctionApp.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="920"
+        Title="MainWindow" Height="650" Width="920"
         WindowStyle ="None"
         ResizeMode="NoResize"
         Background="Transparent"
@@ -45,12 +45,12 @@
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
 
-                <RadioButton Content="Discovery"
+                <RadioButton Content="Sprzedaj"
                            Height="50"
                             Foreground="White"
                             FontSize="14" 
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding DiscoveryViewCommand}"/>
+                             Command="{Binding SellViewCommand}"/>
 
                 <RadioButton Content="Featured"
                            Height="50"
