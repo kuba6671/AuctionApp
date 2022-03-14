@@ -19,7 +19,8 @@ namespace AuctionApp.MVVM.ViewModel
             addCommand = new RelayCommand(o =>
             {
                 string categoryString = category.ToString();
-                string finalCategoryString = "";
+                Trace.WriteLine("categoryString = " + categoryString);
+                /*string finalCategoryString = "";
                 char[] categoryCharArray = categoryString.ToCharArray();
                 bool isAdded = false;
                 for(int i = 0; i < categoryCharArray.Length-2; i++)
@@ -29,11 +30,11 @@ namespace AuctionApp.MVVM.ViewModel
                     if(isAdded)
                         finalCategoryString += categoryString[i + 2];
                 }
-                Trace.WriteLine("finalCategoryString = " + finalCategoryString);
+                Trace.WriteLine("finalCategoryString = " + finalCategoryString);*/
             });
         }
 
-        private string size, state, description, price, category;
+        private string size, state, name, price, category;
         public string getCategory
         {
             get { return this.category; }
@@ -42,7 +43,7 @@ namespace AuctionApp.MVVM.ViewModel
                 if (!string.Equals(this.category, value))
                 {
                     this.category = value;
-                    OnPropertyChanged("getCategory");
+                    OnPropertyChanged();
                 }
             }
         }
@@ -70,14 +71,14 @@ namespace AuctionApp.MVVM.ViewModel
                 }
             }
         }
-        public string DescriptionText
+        public string NameText
         {
-            get { return this.description; }
+            get { return this.name; }
             set
             {
-                if (!string.Equals(this.description, value))
+                if (!string.Equals(this.name, value))
                 {
-                    this.description = value;
+                    this.name = value;
                     OnPropertyChanged();
                 }
             }

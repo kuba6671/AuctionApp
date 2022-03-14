@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AuctionApp.MVVM.Model;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security;
@@ -41,6 +43,7 @@ namespace AuctionApp.MVVM.View
 
             if (SecureStringEqual(SecurePassword, secureUserPassword) && (username.Equals(userUsername)))
             {
+                User.SetUsername(userUsername);
                 MainWindow mainWin = new MainWindow();
                 this.Visibility = Visibility.Hidden;
                 mainWin.Show();

@@ -9,16 +9,21 @@ namespace AuctionApp.MVVM.Model
 {
     class ItemToSell
     {
-        private String size, state, category, description;
+        private String size;
+        private String state;
+        private String category;
+        private String name;
+        private String username;
         private double price;
         private Image itemImage;
 
-        public ItemToSell(Image itemImage, string category,string size, string state, double price,string description)
+        public ItemToSell(string username, Image itemImage, string category, string size, string state, double price, string name)
         {
+            this.username = username;
             this.size = size;
             this.state = state;
             this.category = category;
-            this.description = description;
+            this.name = name;
             this.price = price;
             this.itemImage = itemImage;
         }
@@ -35,19 +40,19 @@ namespace AuctionApp.MVVM.Model
         {
             return category;
         }
-        public String getDescription()
+        public String getName()
         {
-            return description;
+            return name;
         }
 
         public double getPrice()
         {
             return price;
         }
-        
+
         public Image getImage()
         {
             return itemImage;
-        } 
+        }
     }
 }

@@ -302,9 +302,14 @@
                       Width="150" Height="50"
                       Background="#FF272537" 
                       Style="{DynamicResource ComboBoxStyle1}" 
+                      Text="{Binding getCategory}"
                       Margin="20,0,0,0" 
-                      BorderBrush="#FF02A4C3" />
-            
+                      BorderBrush="#FF02A4C3" >
+                <ComboBoxItem Content="Mężczyzna"/>
+                <ComboBoxItem Content="Kobieta"/>
+                <ComboBoxItem Content="Dziecko"/>
+            </ComboBox>
+
         </StackPanel>
         <StackPanel Height="75" Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" Text="Rozmiar" FontSize="20" Foreground="#FF02A4C3" Margin="260,20,20,0" Width="85" Height="55"/>
@@ -333,10 +338,10 @@
                      TextWrapping="Wrap" Width="150" Height="50" Background="#FF272537" FontSize="20" BorderBrush="#FF02A4C3"/>
         </StackPanel>
         <StackPanel Height="75.3" Orientation="Horizontal">
-            <TextBlock TextWrapping="Wrap" Text="Opis" Foreground="#FF02A4C3" FontSize="20" Margin="260,20,20,0" Width="85" Height="55"/>
-            <TextBox x:Name="DescriptionTextBox"
+            <TextBlock TextWrapping="Wrap" Text="Nazwa" Foreground="#FF02A4C3" FontSize="20" Margin="260,20,20,0" Width="85" Height="55"/>
+            <TextBox x:Name="NameTextBox"
                      Foreground="#FF02A4C3"
-                     Text="{Binding DescriptionText}"
+                     Text="{Binding NameText}"
                      TextWrapping="Wrap" Width="150" Height="52" Background="#FF272537" FontSize="16" BorderBrush="#FF02A4C3"/>
         </StackPanel>
         <StackPanel Height="75">

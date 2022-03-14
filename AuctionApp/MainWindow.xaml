@@ -52,11 +52,12 @@
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding SellViewCommand}"/>
 
-                <RadioButton Content="Featured"
+                <RadioButton Content="Kup"
                            Height="50"
                             Foreground="White"
                             FontSize="14" 
-                            Style="{StaticResource MenuButtonTheme}"/>
+                            Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding PurchaseViewCommand}"/>
             </StackPanel>
 
             <TextBox Width="250"
