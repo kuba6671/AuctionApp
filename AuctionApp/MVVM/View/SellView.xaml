@@ -171,7 +171,8 @@
                         </Border>
                     </Themes:SystemDropShadowChrome>
                 </Popup>
-                <ToggleButton x:Name="toggleButton" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxToggleButton}"/>
+                <ToggleButton x:Name="toggleButton" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.ColumnSpan="2"
+                              IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Style="{StaticResource ComboBoxToggleButton}"/>
                 <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" Content="{TemplateBinding SelectionBoxItem}" ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" IsHitTestVisible="false" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
             </Grid>
             <ControlTemplate.Triggers>
@@ -288,17 +289,27 @@
     </UserControl.Resources>
     <StackPanel HorizontalAlignment="Left" Height="525" VerticalAlignment="Top" Width="800">
         <StackPanel HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="800" Margin="0,0,-700,0" Orientation="Horizontal">
-            <Border BorderBrush="Black" BorderThickness="1" Width="151" Margin="300,0,0,0" Height="60" Background="#FF02A4C3">
-                <Button Height="56" Content="+ Dodaj zdjęcie"
+            <Border BorderBrush="Black" BorderThickness="1" Width="151" Margin="260,0,0,0" Height="60" Background="#FF02A4C3">
+                <Button Height="56" 
+                        Content="+ Dodaj zdjęcie"
+                        Command="{Binding addPhotoCommand}"
                         Foreground="#FF02A4C3"
                         RenderTransformOrigin="0.5,0.5" 
-                        Margin="0" Background="#FF272537" Width="146"/>
+                        Margin="2.2,1.2,1.4,0" 
+                        Background="#FF272537" 
+                        Width="146" VerticalAlignment="Top"/>
             </Border>
+            <Image x:Name="SellImage" 
+                   Margin="30,0,0,0" 
+                   Width="150"
+                   Height="75"
+                   Source="{Binding ItemPhoto}"/>
         </StackPanel>
         <StackPanel Height="75" Margin="0" Width="800" Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" Text="Kategoria" FontSize="20"
                        Foreground="#FF02A4C3" Margin="260,20,0,0" Width="85" Height="55"/>
-            <ComboBox x:Name="CategoryTextbox"  
+            <ComboBox x:Name="CategoryTextbox"
+                      SelectedIndex="0"
                       Width="150" Height="50"
                       Background="#FF272537" 
                       Style="{DynamicResource ComboBoxStyle1}" 
@@ -347,7 +358,11 @@
         <StackPanel Height="75">
             <Button x:Name="addButton"
                     Command="{Binding addCommand}"
-                    Foreground="#FF02A4C3" Content="Dodaj" Width="250" Height="50" Margin="0,10,20,0" Background="#FF272537" BorderBrush="#FF02A4C3"/>
+                    Foreground="#FF02A4C3"
+                    Background="#FF272537"
+                    Content="Dodaj" Width="250" Height="50"                  
+                    Margin="0,10,20,0"
+                    BorderBrush="#FF02A4C3"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
