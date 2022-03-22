@@ -30,7 +30,8 @@
             <StackPanel VerticalAlignment="Top" Height="450" Orientation="Horizontal" Margin="3.2,0,-3.2,0" Grid.ColumnSpan="2" Width="800">
                 <StackPanel Width="400" HorizontalAlignment="Right" Height="450">
                     <Border BorderBrush="Black" BorderThickness="1" Height="450">
-                        <Image Margin="0" Width="200" Height="198" Source="/AuctionApp;component/Images/logo.png"/>
+                        <Image Margin="0" Width="400" Height="400" 
+                               Source="/AuctionApp;component/Images/logo_transparent.png"/>
                     </Border>
                 </StackPanel>
                 <StackPanel Width="400">

@@ -17,17 +17,16 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <SolidColorBrush x:Key="ComboBoxItem.ItemsviewHoverFocus.Background" Color="red"/>
+        <SolidColorBrush x:Key="ComboBoxItem.ItemsviewHoverFocus.Border" Color="red" />
         <SolidColorBrush x:Key="ComboBox.Static.Background" Color="#FF272537"/>
-        <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FFACACAC"/>
-        <SolidColorBrush x:Key="ComboBox.Static.Editable.Background" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="ComboBox.Static.Editable.Border" Color="#FFABADB3"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FF02A4C3"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Editable.Background" Color="red"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Editable.Border" Color="red"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Button.Background" Color="Transparent"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Button.Border" Color="Transparent"/>
         <SolidColorBrush x:Key="ComboBox.MouseOver.Glyph" Color="#FF000000"/>
-        <LinearGradientBrush x:Key="ComboBox.MouseOver.Background" EndPoint="0,1" StartPoint="0,0">
-            <GradientStop Color="#FFECF4FC" Offset="0.0"/>
-            <GradientStop Color="#FFDCECFC" Offset="1.0"/>
-        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ComboBox.MouseOver.Background" Color="#FF272537"  />
         <SolidColorBrush x:Key="ComboBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="ComboBox.MouseOver.Editable.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ComboBox.MouseOver.Editable.Border" Color="#FF7EB4EA"/>
@@ -286,6 +285,10 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="ComboBoxItemStyle1" TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="Background" Value="#FF272537"/>
+            <Setter Property="BorderBrush" Value="#FF02A4C3"/>
+        </Style>
     </UserControl.Resources>
     <StackPanel HorizontalAlignment="Left" Height="525" VerticalAlignment="Top" Width="800">
         <StackPanel HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="800" Margin="0,0,-700,0" Orientation="Horizontal">
@@ -315,7 +318,8 @@
                       Style="{DynamicResource ComboBoxStyle1}" 
                       Text="{Binding getCategory}"
                       Margin="20,0,0,0" 
-                      BorderBrush="#FF02A4C3" >
+                      BorderBrush="#FF02A4C3" 
+                      ItemContainerStyle="{DynamicResource ComboBoxItemStyle1}" >
                 <ComboBoxItem Content="Mężczyzna"/>
                 <ComboBoxItem Content="Kobieta"/>
                 <ComboBoxItem Content="Dziecko"/>
