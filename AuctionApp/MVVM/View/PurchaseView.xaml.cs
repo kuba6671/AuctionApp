@@ -27,18 +27,7 @@ namespace AuctionApp.MVVM.View
             StackPanel myStackPanel = new StackPanel();
             myStackPanel.HorizontalAlignment = HorizontalAlignment.Left;
             myStackPanel.VerticalAlignment = VerticalAlignment.Top;
-            /* TextBlock myTextBlock = new TextBlock();
-             myTextBlock.TextWrapping = TextWrapping.Wrap;
-             myTextBlock.Margin = new Thickness(0, 0, 0, 20);
-             myTextBlock.Text = "Scrolling is enabled when it is necessary. Resize the Window, making it larger and smaller.";
 
-             Rectangle myRectangle = new Rectangle();
-             myRectangle.Fill = Brushes.Red;
-             myRectangle.Width = 500;
-             myRectangle.Height = 500;
-             // Add child elements to the parent StackPanel
-             myStackPanel.Children.Add(myTextBlock);
-             myStackPanel.Children.Add(myRectangle);*/
             ItemView item1 = new ItemView();
             ItemView item2 = new ItemView();
             ItemView item3 = new ItemView();
