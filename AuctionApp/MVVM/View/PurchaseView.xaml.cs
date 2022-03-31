@@ -28,10 +28,10 @@ namespace AuctionApp.MVVM.View
             myStackPanel.HorizontalAlignment = HorizontalAlignment.Left;
             myStackPanel.VerticalAlignment = VerticalAlignment.Top;
 
-            ItemView item1 = new ItemView();
-            ItemView item2 = new ItemView();
-            ItemView item3 = new ItemView();
-            ItemView item4 = new ItemView();
+            ItemView item1 = new ItemView("Nazwa1");
+            ItemView item2 = new ItemView("Nazwa2");
+            ItemView item3 = new ItemView("Nazwa3");
+            ItemView item4 = new ItemView("Nazwa4");
             myStackPanel.Children.Add(item1);
             myStackPanel.Children.Add(item2);
             myStackPanel.Children.Add(item3);

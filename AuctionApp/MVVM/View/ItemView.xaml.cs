@@ -20,9 +20,10 @@ namespace AuctionApp.MVVM.View
     /// </summary>
     public partial class ItemView : UserControl
     {
-        public ItemView()
+        public ItemView(string name)
         {
             InitializeComponent();
+            itemName.Text = name;
         }
     }
 }

@@ -17,13 +17,11 @@ namespace AuctionApp.MVVM.ViewModel
         public PurchaseViewModel()
         {
             openItemDetails = new RelayCommand(o =>
-            {         
-                ItemDetailsView detailsWin = new ItemDetailsView();
-                foreach (Window item in Application.Current.Windows)
-                {
-                    if(item != detailsWin)
-                        item.Close();
-                }
+            {
+                var vm = new ItemDetailsViewModel();
+                var detailsWin = new ItemDetailsView("1", "2", "3", "4", "5");
+                detailsWin.DataContext = vm;
+             
                 detailsWin.ShowDialog();
             });
         }

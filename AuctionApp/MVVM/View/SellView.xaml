@@ -309,8 +309,11 @@
                    Source="{Binding ItemPhoto}"/>
         </StackPanel>
         <StackPanel Height="75" Margin="0" Width="800" Orientation="Horizontal">
-            <TextBlock TextWrapping="Wrap" Text="Kategoria" FontSize="20"
-                       Foreground="#FF02A4C3" Margin="260,20,0,0" Width="85" Height="55"/>
+            <TextBlock TextWrapping="Wrap"
+                       Text="Kategoria" FontSize="20"
+                       Foreground="#FF02A4C3" 
+                       Margin="260,20,0,0"
+                       Width="85" Height="55"/>
             <ComboBox x:Name="CategoryTextbox"
                       SelectedIndex="0"
                       Width="150" Height="50"

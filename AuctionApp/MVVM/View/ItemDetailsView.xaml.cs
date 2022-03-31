@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuctionApp.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,14 @@ namespace AuctionApp.MVVM.View
     /// </summary>
     public partial class ItemDetailsView : Window
     {
-        public ItemDetailsView()
+        public ItemDetailsView(string category, string size, string state, string price, string name)
         {
             InitializeComponent();
+            categoryText.Text = category;
+            sizeText.Text = size;
+            stateText.Text = state;
+            priceText.Text = price;
+            nameText.Text = name;
         }
     }
 }

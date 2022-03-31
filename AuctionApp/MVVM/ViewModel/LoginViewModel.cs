@@ -9,11 +9,9 @@ using System.Windows.Input;
 
 namespace AuctionApp.MVVM.ViewModel
 {
-    class LoginViewModel
+    class LoginViewModel : ObservableObject
     {
-
         public RelayCommand CloseCommand { get; set; }
-
 
         public LoginViewModel()
         {
