@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AuctionApp.MVVM.Model;
+using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,22 +25,6 @@ namespace AuctionApp.MVVM.View
         public PurchaseView()
         {
             InitializeComponent();
-
-            StackPanel myStackPanel = new StackPanel();
-            myStackPanel.HorizontalAlignment = HorizontalAlignment.Left;
-            myStackPanel.VerticalAlignment = VerticalAlignment.Top;
-
-            ItemView item1 = new ItemView("Nazwa1");
-            ItemView item2 = new ItemView("Nazwa2");
-            ItemView item3 = new ItemView("Nazwa3");
-            ItemView item4 = new ItemView("Nazwa4");
-            myStackPanel.Children.Add(item1);
-            myStackPanel.Children.Add(item2);
-            myStackPanel.Children.Add(item3);
-            myStackPanel.Children.Add(item4);
-
-
-            ItemsScrollViewer.Content = myStackPanel;
         }
     }
 }

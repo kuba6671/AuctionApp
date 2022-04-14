@@ -15,14 +15,13 @@ namespace AuctionApp.MVVM.ViewModel
 
         public ItemDetailsViewModel()
         {
-             CloseCommand = new RelayCommand(o =>
-             {
-                 foreach (Window item in Application.Current.Windows)
-                 {
-                     Trace.WriteLine("Dupa");
-                     if (item.DataContext == this) item.Close();
-                 }
-             });
+            CloseCommand = new RelayCommand(o =>
+            {
+                foreach (Window item in Application.Current.Windows)
+                {
+                    if (item.DataContext == this) item.Close();
+                }
+            });
 
         }
     }

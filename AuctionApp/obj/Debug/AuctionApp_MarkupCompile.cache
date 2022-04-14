@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Debug\
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\
 AuctionApp
 none
 false
 DEBUG;TRACE
-E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\App.xaml
-7969474458
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\App.xaml
+10224853368
 
-15-1945474047
-13-1505183044
-MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\HomeView.xaml;MVVM\View\LoginPanel.xaml;MVVM\View\RegistrationView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
+24-65044776
+127-817415655
+MainWindow.xaml;MVVM\View\HomeView.xaml;MVVM\View\ItemDetailsView.xaml;MVVM\View\ItemView.xaml;MVVM\View\LoginPanel.xaml;MVVM\View\PurchaseView.xaml;MVVM\View\RegistrationView.xaml;MVVM\View\SellView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
 
 False
 

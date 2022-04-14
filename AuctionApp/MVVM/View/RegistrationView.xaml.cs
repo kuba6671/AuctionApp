@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AuctionApp.MVVM.Model;
+using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security;
@@ -42,13 +44,27 @@ namespace AuctionApp.MVVM.View
         {
             SecurePassword = PasswordTextbox.SecurePassword;
         }
+
         private void SignUp(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextbox.Text;
+            Database database = new Database();
+            MySqlConnection connection = database.getConnection();
 
-            LoginPanel loginWin = new LoginPanel();
-            this.Visibility = Visibility.Hidden;
-            loginWin.Show();
+            string sql = "INSERT INTO user(username,password) VALUES(@username,@userPassword)";
+            MySqlCommand cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@username", UsernameTextbox.Text);
+            cmd.Parameters.AddWithValue("@userPassword", PasswordTextbox.Password);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                LoginPanel loginWin = new LoginPanel();
+                this.Visibility = Visibility.Hidden;
+                loginWin.Show();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

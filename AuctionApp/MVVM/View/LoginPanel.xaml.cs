@@ -1,6 +1,8 @@
 ﻿using AuctionApp.MVVM.Model;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -31,23 +33,34 @@ namespace AuctionApp.MVVM.View
             InitializeComponent();
         }
 
+
         private void SignIn(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextbox.Text;
-            string userUsername = "user";
-            string chars = "pass";
-            SecureString secureUserPassword = new SecureString();
+            Database database = new Database();
+            MySqlConnection connection = database.getConnection();
 
-            foreach (char ch in chars)
-                secureUserPassword.AppendChar(ch);
+            string sql = "SELECT userID,username, password from user where username=@username AND password=@userPassword";
+            MySqlCommand cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@username", UsernameTextbox.Text);
+            cmd.Parameters.AddWithValue("@userPassword", PasswordTextbox.Password);
+            MySqlDataReader rdr = cmd.ExecuteReader();
 
-            if (SecureStringEqual(SecurePassword, secureUserPassword) && (username.Equals(userUsername)))
+            if (rdr.Read())
             {
-                User.SetUsername(userUsername);
+                User.SetUsername(UsernameTextbox.Text);
+                string stringUserID = rdr[0].ToString();
+                int userID = int.Parse(stringUserID);
+                User.SetUserID(userID);
                 MainWindow mainWin = new MainWindow();
                 this.Visibility = Visibility.Hidden;
                 mainWin.Show();
             }
+            else
+            {
+                MessageBox.Show("Podane dane sa bledne");
+            }
+            rdr.Close();
+
         }
 
         private void SignUp(object sender, RoutedEventArgs e)
@@ -69,51 +82,6 @@ namespace AuctionApp.MVVM.View
         private void PasswordTextbox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             SecurePassword = PasswordTextbox.SecurePassword;
-        }
-
-        Boolean SecureStringEqual(SecureString secureString1, SecureString secureString2)
-        {
-            if (secureString1 == null)
-            {
-                //throw new ArgumentNullException("s1");
-                return false;
-            }
-            if (secureString2 == null)
-            {
-                return false;
-                //throw new ArgumentNullException("s2");
-            }
-
-            if (secureString1.Length != secureString2.Length)
-            {
-                return false;
-            }
-
-            IntPtr ss_bstr1_ptr = IntPtr.Zero;
-            IntPtr ss_bstr2_ptr = IntPtr.Zero;
-
-            try
-            {
-                ss_bstr1_ptr = Marshal.SecureStringToBSTR(secureString1);
-                ss_bstr2_ptr = Marshal.SecureStringToBSTR(secureString2);
-
-                String str1 = Marshal.PtrToStringBSTR(ss_bstr1_ptr);
-                String str2 = Marshal.PtrToStringBSTR(ss_bstr2_ptr);
-
-                return str1.Equals(str2);
-            }
-            finally
-            {
-                if (ss_bstr1_ptr != IntPtr.Zero)
-                {
-                    Marshal.ZeroFreeBSTR(ss_bstr1_ptr);
-                }
-
-                if (ss_bstr2_ptr != IntPtr.Zero)
-                {
-                    Marshal.ZeroFreeBSTR(ss_bstr2_ptr);
-                }
-            }
         }
     }
 }

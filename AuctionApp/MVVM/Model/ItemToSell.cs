@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace AuctionApp.MVVM.Model
 {
-    class ItemToSell
+    public class ItemToSell
     {
         private String size;
         private String state;

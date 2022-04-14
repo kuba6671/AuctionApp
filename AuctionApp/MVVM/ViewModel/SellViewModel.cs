@@ -22,7 +22,6 @@ namespace AuctionApp.MVVM.ViewModel
         public RelayCommand addCommand { get; set; }
         public RelayCommand addPhotoCommand { get; set; }
 
-
         public SellViewModel()
         {
             addCommand = new RelayCommand(o =>
@@ -55,7 +54,7 @@ namespace AuctionApp.MVVM.ViewModel
             }
         }
 
-        private string size, state, name, price, category="Mężczyzna";
+        private string size, state, name, price, category = "Mężczyzna";
         public string getCategory
         {
             get { return this.category; }
