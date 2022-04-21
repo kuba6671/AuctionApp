@@ -20,14 +20,9 @@ namespace AuctionApp.MVVM.View
     /// </summary>
     public partial class ItemDetailsView : Window
     {
-        public ItemDetailsView(string category, string size, string state, string price, string name)
+        public ItemDetailsView()
         {
             InitializeComponent();
-            categoryText.Text = category;
-            sizeText.Text = size;
-            stateText.Text = state;
-            priceText.Text = price;
-            nameText.Text = name;
         }
     }
 }

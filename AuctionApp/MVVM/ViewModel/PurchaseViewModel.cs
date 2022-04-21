@@ -16,6 +16,9 @@ namespace AuctionApp.MVVM.ViewModel
 {
     class PurchaseViewModel : ObservableObject
     {
+        //private string itemID;
+        //private string itemName;
+
         public RelayCommand openItemDetails { get; set; }
 
         public ObservableCollection<ItemView> itemsList { get; set; }
@@ -25,16 +28,18 @@ namespace AuctionApp.MVVM.ViewModel
             Database database = new Database();
             MySqlConnection connection = database.getConnection();
 
-            string sql = "SELECT name, imageSource from item where userID=@userID";
+            string sql = "SELECT * from item where userID=@userID";
             MySqlCommand cmd = new MySqlCommand(sql, connection);
             cmd.Parameters.AddWithValue("@userID", User.getUserID());
             MySqlDataReader rdr = cmd.ExecuteReader();
+
 
             List<ItemView> items = new List<ItemView>();
 
             while (rdr.Read())
             {
-                items.Add(new ItemView(rdr[0].ToString()));
+                ItemToSell itemToSell = new ItemToSell(rdr);
+                items.Add(new ItemView(itemToSell));
             }
 
             itemsList = new ObservableCollection<ItemView>{};
@@ -42,15 +47,7 @@ namespace AuctionApp.MVVM.ViewModel
             {
                 itemsList.Add(item);
             }
-            
-            openItemDetails = new RelayCommand(o =>
-            {
-                var vm = new ItemDetailsViewModel();
-                var detailsWin = new ItemDetailsView("1", "2", "3", "4", "5");
-                detailsWin.DataContext = vm;
 
-                detailsWin.ShowDialog();
-            });
         }
     }
 }

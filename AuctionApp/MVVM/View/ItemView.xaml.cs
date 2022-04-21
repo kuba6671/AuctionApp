@@ -1,6 +1,9 @@
 ﻿using AuctionApp.MVVM.Model;
+using AuctionApp.MVVM.ViewModel;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +24,34 @@ namespace AuctionApp.MVVM.View
     /// </summary>
     public partial class ItemView : UserControl
     {
-        public ItemView(string name)
+        ItemToSell itemToSell;
+
+        public ItemView(ItemToSell itemToSell)
         {
             InitializeComponent();
-            itemName.Text = name;
+            MySqlDataReader rdr = itemToSell.getRdr();
+            this.itemToSell = new ItemToSell(rdr[1].ToString(), rdr[2].ToString(), rdr[3].ToString(), rdr[4].ToString(),
+                Double.Parse(rdr[5].ToString()), rdr[6].ToString());
+            itemID.Text = rdr[0].ToString();
+            itemName.Text = this.itemToSell.getName();
+        }
+
+        public string getID()
+        {
+            return itemID.Text;
+        }
+
+        public string getName()
+        {
+            return itemName.Text;
+        }
+
+        private void openItemDetails(object sender, RoutedEventArgs e)
+        {
+            var vm = new ItemDetailsViewModel(itemToSell);
+            var detailsWin = new ItemDetailsView();
+            detailsWin.DataContext = vm;
+            detailsWin.ShowDialog();
         }
     }
 }

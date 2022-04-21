@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" 
-             xmlns:local="clr-namespace:AuctionApp.MVVM.View"
+             xmlns:local="clr-namespace:AuctionApp.MVVM.View" xmlns:viewmodel="clr-namespace:AuctionApp.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:SellViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Height="525">
     <UserControl.Resources>

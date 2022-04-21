@@ -41,6 +41,7 @@
             <StackPanel Height="66" Width="400" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Kategoria" Height="55" Width="100" Margin="100,10,0,0" FontSize="20" Foreground="#FF02A4C3"/>
                 <TextBlock x:Name="categoryText" 
+                       Text="{Binding CategoryText}"
                        TextWrapping="Wrap"  
                        Width="100" Height="55" 
                        Margin="20,10,0,0" 
@@ -51,6 +52,7 @@
                 <TextBlock TextWrapping="Wrap" Text="Rozmiar" Height="55" Width="100" Margin="100,10.5,0,0.5" FontSize="20" Foreground="#FF02A4C3"/>
                 <TextBlock x:Name="sizeText" 
                        TextWrapping="Wrap" 
+                       Text="{Binding SizeText}"    
                        Width="100" Height="55"
                        Margin="20,10.5,0,0.5"
                        FontSize="20" 
@@ -58,16 +60,29 @@
             </StackPanel>
             <StackPanel Height="66" Width="400" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Stan" Height="55" Width="100" Margin="100,10.5,0,0.5" FontSize="20" Foreground="#FF02A4C3"/>
-                <TextBlock x:Name="stateText" TextWrapping="Wrap" Width="100" Height="55" Margin="20,10.5,0,0.5" FontSize="20" Foreground="#FF02A4C3"/>
+                <TextBlock x:Name="stateText" 
+                           TextWrapping="Wrap"
+                           Text="{Binding StateText}"
+                           Width="100" Height="55"
+                           Margin="20,10.5,0,0.5" 
+                           FontSize="20"
+                           Foreground="#FF02A4C3"/>
             </StackPanel>
             <StackPanel Height="66" Width="400" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Cena" Height="55" Width="100" Margin="100,10.5,0,0.5" FontSize="20" Foreground="#FF02A4C3"/>
-                <TextBlock x:Name="priceText" TextWrapping="Wrap" Width="100" Height="55" Margin="20,10.5,0,0.5" FontSize="20" Foreground="#FF02A4C3"/>
+                <TextBlock x:Name="priceText"
+                           TextWrapping="Wrap"
+                           Text="{Binding PriceText}"
+                           Width="100" Height="55" 
+                           Margin="20,10.5,0,0.5" 
+                           FontSize="20"
+                           Foreground="#FF02A4C3"/>
             </StackPanel>
             <StackPanel Height="66" Width="400" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Nazwa" Height="55" Width="100" Margin="100,10.5,0,0.5" FontSize="20" Foreground="#FF02A4C3"/>
                 <TextBlock x:Name="nameText" 
                        TextWrapping="Wrap"
+                       Text="{Binding NameText}"
                        Width="100" Height="55" 
                        Margin="20,10.5,0,0.5" 
                        FontSize="20"

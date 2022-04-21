@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,9 @@ namespace AuctionApp.MVVM.Model
         private String name;
         private String username;
         private double price;
+        private string itemURL;
         private ImageSource itemImage;
+        private MySqlDataReader rdr;
 
         public ItemToSell(ImageSource itemImage, string category, string size, string state, double price, string name)
         {
@@ -27,6 +30,21 @@ namespace AuctionApp.MVVM.Model
             this.name = name;
             this.price = price;
             this.itemImage = itemImage;
+        }
+        public ItemToSell(string size, string state,string category, string name, double price, string itemURL)
+        {
+            this.username = User.getUsername();
+            this.size = size;
+            this.state = state;
+            this.category = category;
+            this.name = name;
+            this.price = price;
+            this.itemURL = itemURL;
+        }
+
+        public ItemToSell(MySqlDataReader rdr)
+        {
+            this.rdr = rdr;
         }
 
         public String getSize()
@@ -54,6 +72,16 @@ namespace AuctionApp.MVVM.Model
         public ImageSource getImage()
         {
             return itemImage;
+        }
+
+        public string getURL()
+        {
+            return itemURL;
+        }
+
+        public MySqlDataReader getRdr()
+        {
+            return rdr;
         }
     }
 }
