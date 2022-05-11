@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using MySqlConnector;
+using System.Windows;
 
 namespace AuctionApp.MVVM.ViewModel
 {
@@ -29,6 +31,29 @@ namespace AuctionApp.MVVM.ViewModel
                 string categoryString = category.ToString();
                 double price = Convert.ToDouble(PriceText);
                 ItemToSell newItem = new ItemToSell(ItemPhoto, categoryString, SizeText, StateText, price, NameText);
+
+                Database database = new Database();
+                MySqlConnection connection = database.getConnection();
+                String sql = "INSERT INTO item VALUES (NULL,@size,@state,@category,@name,@price,@imageSource,@userID)";
+                MySqlCommand cmd = new MySqlCommand(sql,connection);
+                cmd.Parameters.AddWithValue("@size",newItem.getSize());
+                cmd.Parameters.AddWithValue("@state",newItem.getState());
+                cmd.Parameters.AddWithValue("@category",newItem.getCategory());
+                cmd.Parameters.AddWithValue("@name",newItem.getName());
+                cmd.Parameters.AddWithValue("@price",newItem.getPrice());
+                cmd.Parameters.AddWithValue("@imageSource",newItem.getURL());
+                cmd.Parameters.AddWithValue("@userID", User.getUserID());
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr != null)
+                    MessageBox.Show("Dodano przedmiot");
+                else
+                {
+                    MessageBox.Show("Cos poszlo nie tak");
+                }
+                //while (rdr.Read())
+                //{
+                //    MessageBox.Show("Dodano przedmiot");
+                //}
             });
 
             addPhotoCommand = new RelayCommand(o =>

@@ -28,7 +28,7 @@ namespace AuctionApp.MVVM.ViewModel
             Database database = new Database();
             MySqlConnection connection = database.getConnection();
 
-            string sql = "SELECT * from item where userID=@userID";
+            string sql = "SELECT * from item where userID != @userID";
             MySqlCommand cmd = new MySqlCommand(sql, connection);
             cmd.Parameters.AddWithValue("@userID", User.getUserID());
             MySqlDataReader rdr = cmd.ExecuteReader();

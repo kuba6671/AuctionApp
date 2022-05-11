@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace AuctionApp.MVVM.ViewModel
 {
@@ -19,6 +21,7 @@ namespace AuctionApp.MVVM.ViewModel
         private string state;
         private string size;
         private string price;
+        private ImageSource ItemPhoto;
 
         public ItemDetailsViewModel() { }
 
@@ -29,6 +32,8 @@ namespace AuctionApp.MVVM.ViewModel
             price = itemToSell.getPrice().ToString();
             category = itemToSell.getCategory();
             name = itemToSell.getName();
+            ItemPhoto = new BitmapImage(new Uri(itemToSell.getURL()));
+
             CloseCommand = new RelayCommand(o =>
             {
                 foreach (Window item in Application.Current.Windows)
@@ -36,6 +41,16 @@ namespace AuctionApp.MVVM.ViewModel
                     if (item.DataContext == this) item.Close();
                 }
             });
+        }
+
+        public ImageSource itemDetailsPhoto
+        {
+            get { return ItemPhoto; }
+            set
+            {
+                ItemPhoto = value;
+                OnPropertyChanged();
+            }
         }
 
         public string CategoryText

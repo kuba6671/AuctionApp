@@ -34,6 +34,7 @@ namespace AuctionApp.MVVM.View
                 Double.Parse(rdr[5].ToString()), rdr[6].ToString());
             itemID.Text = rdr[0].ToString();
             itemName.Text = this.itemToSell.getName();
+            SellItemPhoto.Source = new BitmapImage(new Uri(this.itemToSell.getURL()));
         }
 
         public string getID()

@@ -30,6 +30,7 @@ namespace AuctionApp.MVVM.Model
             this.name = name;
             this.price = price;
             this.itemImage = itemImage;
+            this.itemURL = itemImage.ToString();
         }
         public ItemToSell(string size, string state,string category, string name, double price, string itemURL)
         {
