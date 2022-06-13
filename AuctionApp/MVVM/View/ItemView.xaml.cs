@@ -30,7 +30,7 @@ namespace AuctionApp.MVVM.View
         {
             InitializeComponent();
             MySqlDataReader rdr = itemToSell.getRdr();
-            this.itemToSell = new ItemToSell(rdr[1].ToString(), rdr[2].ToString(), rdr[3].ToString(), rdr[4].ToString(),
+            this.itemToSell = new ItemToSell(Int32.Parse(rdr[0].ToString()), rdr[1].ToString(), rdr[2].ToString(), rdr[3].ToString(), rdr[4].ToString(),
                 Double.Parse(rdr[5].ToString()), rdr[6].ToString());
             itemID.Text = rdr[0].ToString();
             itemName.Text = this.itemToSell.getName();

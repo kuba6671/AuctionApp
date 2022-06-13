@@ -60,6 +60,9 @@
                         <GradientStop Color="#ffb73a" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
+                <Image Width="200"
+                       Height="200"
+                       Source="/Images/man.png"/>
 
             </Border>
         </StackPanel>
@@ -80,19 +83,39 @@
                         Height="150"
                         Background="#844eff"
                         CornerRadius="10"
-                        Margin="0"/>
+                        Margin="0">
+                    <Image
+                       Width="150"
+                       Height="150"
+                       Source="/Images/bluza.png"/>
+                </Border>
                 <Border Width="150"
                         Height="150"
                         Background="#4e99ff"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+                    <Image
+                       Width="150"
+                       Height="150"
+                       Source="/Images/Sukienka.png"/>
+                </Border>
                 <Border Width="150"
                         Height="150"
                         Background="#4eff91"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+                    <Image
+                       Width="150"
+                       Height="150"
+                       Source="/Images/T-shirt_K.png"/>
+                </Border>
                 <Border Width="150"
                         Height="150"
                         Background="#ecff4e"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+                    <Image
+                       Width="150"
+                       Height="150"
+                       Source="/Images/Szorty_2.png"/>
+                </Border>
             </StackPanel>
 
         </StackPanel>

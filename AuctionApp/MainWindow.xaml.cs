@@ -23,6 +23,7 @@ namespace AuctionApp
         public MainWindow()
         {
             InitializeComponent();
+            ContentControl contentControl = new ContentControl();
         }
     }
 }

@@ -11,6 +11,7 @@ namespace AuctionApp.MVVM.Model
 {
     public class ItemToSell
     {
+        private int id;
         private String size;
         private String state;
         private String category;
@@ -21,6 +22,29 @@ namespace AuctionApp.MVVM.Model
         private ImageSource itemImage;
         private MySqlDataReader rdr;
 
+        public ItemToSell(int id,ImageSource itemImage, string category, string size, string state, double price, string name)
+        {
+            this.id = id;
+            this.username = User.getUsername();
+            this.size = size;
+            this.state = state;
+            this.category = category;
+            this.name = name;
+            this.price = price;
+            this.itemImage = itemImage;
+            this.itemURL = itemImage.ToString();
+        }
+        public ItemToSell(int id,string size, string state,string category, string name, double price, string itemURL)
+        {
+            this.id = id;
+            this.username = User.getUsername();
+            this.size = size;
+            this.state = state;
+            this.category = category;
+            this.name = name;
+            this.price = price;
+            this.itemURL = itemURL;
+        }
         public ItemToSell(ImageSource itemImage, string category, string size, string state, double price, string name)
         {
             this.username = User.getUsername();
@@ -32,7 +56,7 @@ namespace AuctionApp.MVVM.Model
             this.itemImage = itemImage;
             this.itemURL = itemImage.ToString();
         }
-        public ItemToSell(string size, string state,string category, string name, double price, string itemURL)
+        public ItemToSell(string size, string state, string category, string name, double price, string itemURL)
         {
             this.username = User.getUsername();
             this.size = size;
@@ -46,6 +70,11 @@ namespace AuctionApp.MVVM.Model
         public ItemToSell(MySqlDataReader rdr)
         {
             this.rdr = rdr;
+        }
+
+        public int getId()
+        {
+            return id;
         }
 
         public String getSize()

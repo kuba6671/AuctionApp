@@ -1,4 +1,5 @@
 ﻿using AuctionApp.Core;
+using AuctionApp.MVVM.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -43,6 +44,15 @@ namespace AuctionApp.MVVM.ViewModel
             PurchaseVM = new PurchaseViewModel();
 
             CurrentView = HomeVM;
+
+            if (Counter.getCounter() == 0)
+            {
+                Counter.increment();
+            }
+            else
+            {
+                CurrentView = PurchaseVM;
+            }
 
             HomeViewCommand = new RelayCommand(o =>
             {

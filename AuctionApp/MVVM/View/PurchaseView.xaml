@@ -21,7 +21,8 @@
                 <StackPanel 
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top">
-                    <ItemsControl ItemsSource="{Binding itemsList}">
+                    <ItemsControl 
+                        ItemsSource="{Binding itemsList}">
                     </ItemsControl>
                 </StackPanel>                 
 

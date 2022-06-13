@@ -1,4 +1,5 @@
 ﻿using AuctionApp.MVVM.Model;
+using AuctionApp.MVVM.ViewModel;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;

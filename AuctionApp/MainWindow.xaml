@@ -39,7 +39,7 @@
                        Margin="20,0,0,0"/>
 
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Home"
+                <RadioButton Content="Strona główna"
                            Height="50"
                             Foreground="White"
                             FontSize="14" 
@@ -84,8 +84,6 @@
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
-
-
         </Grid>
     </Border>
 </Window>

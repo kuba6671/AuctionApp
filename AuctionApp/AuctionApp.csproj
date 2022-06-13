@@ -131,6 +131,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\Model\Counter.cs" />
     <Compile Include="MVVM\Model\Database.cs" />
     <Compile Include="MVVM\Model\ItemToSell.cs" />
     <Compile Include="MVVM\Model\User.cs" />
@@ -192,16 +193,26 @@
     <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\logo_transparent.png" />
     <Resource Include="Images\man.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\logo_transparent.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\leftArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dresy.png" />
+    <Resource Include="Images\Kombinezon.png" />
+    <Resource Include="Images\Spodnica.png" />
+    <Resource Include="Images\Sukienka.png" />
+    <Resource Include="Images\Sweter.png" />
+    <Resource Include="Images\Szorty.png" />
+    <Resource Include="Images\Szorty_2.png" />
+    <Resource Include="Images\T-shirt_D.png" />
+    <Resource Include="Images\T-shirt_K.png" />
+    <Resource Include="Images\T-shirt_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bluza.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

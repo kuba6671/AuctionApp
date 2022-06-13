@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
+using MySqlConnector;
 
 namespace AuctionApp.MVVM.ViewModel
 {
     class ItemDetailsViewModel : ObservableObject
     {
         public RelayCommand CloseCommand { get; private set; }
+
+        public RelayCommand BuyCommand { get; private set; }
 
         private string category;
         private string name;
@@ -39,6 +42,38 @@ namespace AuctionApp.MVVM.ViewModel
                 foreach (Window item in Application.Current.Windows)
                 {
                     if (item.DataContext == this) item.Close();
+                }
+            });
+
+            BuyCommand = new RelayCommand(o =>
+            {
+                Database database = new Database();
+                MySqlConnection connection = database.getConnection();
+                String sql = "DELETE FROM ITEM WHERE itemID=@itemID";
+                MySqlCommand cmd = new MySqlCommand(sql, connection);
+                cmd.Parameters.AddWithValue("@itemID", itemToSell.getId());
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr != null)
+                {
+                    MessageBox.Show("Przedmiot zostal kupiony");
+                    foreach (Window item in Application.Current.Windows)
+                    {
+                        if(item.ToString()== "AuctionApp.MainWindow")
+                        {
+                            item.Close();
+                        }
+                        if (item.DataContext == this)
+                        {
+                            item.Close();
+                            MainWindow newWindow = new MainWindow();
+                            Application.Current.MainWindow = newWindow;
+                            newWindow.Show();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cos poszlo nie tak");
                 }
             });
         }

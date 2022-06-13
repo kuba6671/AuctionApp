@@ -16,10 +16,7 @@ namespace AuctionApp.MVVM.ViewModel
 {
     class PurchaseViewModel : ObservableObject
     {
-        //private string itemID;
-        //private string itemName;
-
-        public RelayCommand openItemDetails { get; set; }
+        //public RelayCommand openItemDetails { get; set; }
 
         public ObservableCollection<ItemView> itemsList { get; set; }
 
@@ -47,7 +44,6 @@ namespace AuctionApp.MVVM.ViewModel
             {
                 itemsList.Add(item);
             }
-
         }
     }
 }
