@@ -8,16 +8,27 @@ namespace AuctionApp.MVVM.Model
 {
     static class Counter
     {
-        private static int counter = 0;
+        private static int counterMainWindow = 0;
+        private static int counterSearch = 0;
 
-        public static void increment()
+        public static void incrementMainWindow()
         {
-            Counter.counter = 1;
+            Counter.counterMainWindow = 1;
         }
 
-        public static int getCounter()
+        public static void incrementSearch()
         {
-            return counter;
+            Counter.counterSearch = 1;
+        }
+
+        public static int getCounterMainWindow()
+        {
+            return counterMainWindow;
+        }
+
+        public static int getCounterSearch()
+        {
+            return counterSearch;
         }
     }
 }

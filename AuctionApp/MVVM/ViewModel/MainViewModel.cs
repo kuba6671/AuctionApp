@@ -44,10 +44,9 @@ namespace AuctionApp.MVVM.ViewModel
             PurchaseVM = new PurchaseViewModel();
 
             CurrentView = HomeVM;
-
-            if (Counter.getCounter() == 0)
+            if (Counter.getCounterMainWindow() == 0)
             {
-                Counter.increment();
+                Counter.incrementMainWindow();
             }
             else
             {

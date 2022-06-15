@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:AuctionApp.MVVM.View"
+             xmlns:local="clr-namespace:AuctionApp.MVVM.View" xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
              d:DesignHeight="450"
              d:DesignWidth="800" 
@@ -15,7 +15,7 @@
         <Grid Height="525">
             <ScrollViewer x:Name="ItemsScrollViewer" 
                           HorizontalAlignment="Left"
-                          Height="525" Margin="0" 
+                          Height="465" Margin="0,60,0,0" 
                           VerticalAlignment="Top" 
                           Width="800">
                 <StackPanel 
@@ -24,9 +24,66 @@
                     <ItemsControl 
                         ItemsSource="{Binding itemsList}">
                     </ItemsControl>
-                </StackPanel>                 
+                </StackPanel>
 
             </ScrollViewer>
+            <ComboBox HorizontalAlignment="Left" 
+                      Margin="60,27,0,0"
+                      VerticalAlignment="Top"
+                      Width="120" 
+                      Background="#FF272537"
+                      SelectedItem="{Binding getState}"
+                      >
+                <ComboBoxItem Content="Bardzo Dobry"/>
+                <ComboBoxItem Content="Dobry"/>
+                <ComboBoxItem Content="Zadowalajacy"/>
+                <ComboBoxItem Content="Uszkodzony"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding StateItemCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left"
+                      Margin="260,27,0,0"
+                      VerticalAlignment="Top" 
+                      Width="120"
+                      SelectedItem="{Binding getSize}">
+                <ComboBoxItem Content="XS"/>
+                <ComboBoxItem Content="S"/>
+                <ComboBoxItem Content="M"/>
+                <ComboBoxItem Content="L"/>
+                <ComboBoxItem Content="XL"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding SizeItemCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Left" 
+                      Margin="460,27,0,0"
+                      VerticalAlignment="Top" 
+                      Width="120"
+                      SelectedItem="{Binding getCategory}">
+                <ComboBoxItem Content="Mężczyzna"/>
+                <ComboBoxItem Content="Kobieta"/>
+                <ComboBoxItem Content="Dziecko"/>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding CategoryItemCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="99.332,6.04,0,0"
+                       TextWrapping="Wrap" 
+                       Text="Stan" 
+                       VerticalAlignment="Top"
+                       Foreground="#FF02A4C3" />
+            <TextBlock Foreground="#FF02A4C3"
+                HorizontalAlignment="Left" Margin="300.5,6.04,0,0" TextWrapping="Wrap" Text="Rozmiar" VerticalAlignment="Top"/>
+            <TextBlock Foreground="#FF02A4C3"
+                HorizontalAlignment="Left" Margin="500.633,6.04,0,0" TextWrapping="Wrap" Text="Kategoria" VerticalAlignment="Top"/>
         </Grid>
     </StackPanel>
 </UserControl>

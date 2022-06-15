@@ -24,6 +24,26 @@ E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Debug\AuctionApp.cspro
 E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Debug\AuctionApp.csproj.CoreCompileInputs.cache
 E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Debug\AuctionApp.exe
 E:\Programowanie\WPF\AuctionApp\AuctionApp\AuctionApp\obj\Debug\AuctionApp.pdb
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\AuctionApp.exe.config
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\AuctionApp.exe
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\AuctionApp.pdb
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\Microsoft.Xaml.Behaviors.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\MySqlConnector.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Buffers.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Memory.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Numerics.Vectors.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\Microsoft.Xaml.Behaviors.xml
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\MySqlConnector.xml
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Buffers.xml
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Memory.xml
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Numerics.Vectors.xml
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\Theme\MenuButtonTheme.baml
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\Theme\TextboxTheme.baml
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\MainWindow.g.cs
@@ -38,9 +58,6 @@ E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\App.g.
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp_MarkupCompile.cache
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp_MarkupCompile.lref
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\AuctionApp.exe.config
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\AuctionApp.exe
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\AuctionApp.pdb
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\App.baml
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\MainWindow.baml
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\MVVM\View\HomeView.baml
@@ -54,21 +71,7 @@ E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\Auctio
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.Properties.Resources.resources
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.csproj.GenerateResource.cache
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.csproj.CoreCompileInputs.cache
+E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.csproj.CopyComplete
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.exe
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.pdb
 E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.csproj.AssemblyReference.cache
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\MySqlConnector.dll
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Buffers.dll
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Memory.dll
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Numerics.Vectors.dll
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Threading.Tasks.Extensions.dll
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\MySqlConnector.xml
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Buffers.xml
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Memory.xml
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Numerics.Vectors.xml
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\bin\Debug\System.Threading.Tasks.Extensions.xml
-E:\Studia\Semestr 6\KomunikacjaCK\Projekt\AuctionApp\AuctionApp\obj\Debug\AuctionApp.csproj.CopyComplete

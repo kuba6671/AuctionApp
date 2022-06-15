@@ -50,10 +50,6 @@ namespace AuctionApp.MVVM.ViewModel
                 {
                     MessageBox.Show("Cos poszlo nie tak");
                 }
-                //while (rdr.Read())
-                //{
-                //    MessageBox.Show("Dodano przedmiot");
-                //}
             });
 
             addPhotoCommand = new RelayCommand(o =>
